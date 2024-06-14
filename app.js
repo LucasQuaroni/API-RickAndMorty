@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevPageButton = document.getElementById("prevPage");
   const nextPageButton = document.getElementById("nextPage");
   const pagination = document.querySelector(".pagination");
-  let currentPage = 1;
-  let currentFilters = {};
+  var currentPage = 1;
+  var currentFilters = {};
 
   btn.onclick = function () {
     modal.style.display = "block";
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.querySelector(".characters").addEventListener("click", () => {
+    currentPage = 1;
     getCharacters(currentPage);
     pagination.style.display = "flex";
   });
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //funciones
   async function getCharacters(page) {
     try {
       const response = await fetch(
