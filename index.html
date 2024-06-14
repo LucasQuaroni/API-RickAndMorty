@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Rick and Morty API</h1>
+        <img src="resources/3f8ae4a13de932bc679af5272ce983693d773818ff67a774dfcf0592bcd3beb7._SX1080_FMjpg_.jpg" alt="" />
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <button class="characters">Obtener personajes</button>
+            </section>
+            <section>
+                <button class="filters">Filtros</button>
+            </section>
+        </div>
+        <div class="characters-container"></div>
+    </main>
+    <footer>
+        <p>Desarrollado por <b>Lucas Quaroni</b></p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="filterForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" />
+                <label for="status">Estado:</label>
+                <input type="text" id="status" name="status" />
+                <label for="species">Especie:</label>
+                <input type="text" id="species" name="species" />
+                <label for="type">Tipo:</label>
+                <input type="text" id="type" name="type" />
+                <label for="gender">Género:</label>
+                <input type="text" id="gender" name="gender" />
+                <button type="submit">Filtrar personajes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
