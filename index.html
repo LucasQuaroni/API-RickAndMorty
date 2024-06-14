@@ -15,19 +15,23 @@
     <main>
         <div class="container">
             <section>
-                <button class="characters">Obtener personajes</button>
+                <button id="getAllCharacters" class="characters">Obtener personajes</button>
             </section>
             <section>
                 <button class="filters">Filtros</button>
             </section>
         </div>
         <div class="characters-container"></div>
+        <div class="pagination">
+            <button id="prevPage" disabled>Anterior</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" disabled>Siguiente</button>
+        </div>
     </main>
     <footer>
         <p>Desarrollado por <b>Lucas Quaroni</b></p>
     </footer>
 
-    <!-- Modal -->
     <div id="filterModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -35,13 +39,24 @@
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" />
                 <label for="status">Estado:</label>
-                <input type="text" id="status" name="status" />
+                <select name="status" id="status">
+                    <option value="">Seleccionar...</option>
+                    <option value="Alive">Alive</option>
+                    <option value="Dead">Dead</option>
+                    <option value="unknown">Unknown</option>
+                </select>
                 <label for="species">Especie:</label>
                 <input type="text" id="species" name="species" />
                 <label for="type">Tipo:</label>
                 <input type="text" id="type" name="type" />
                 <label for="gender">Género:</label>
-                <input type="text" id="gender" name="gender" />
+                <select name="gender" id="gender">
+                    <option value="">Seleccionar...</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Genderless">Genderless</option>
+                    <option value="Unknown">Unknown</option>
+                </select>
                 <button type="submit">Filtrar personajes</button>
             </form>
         </div>
